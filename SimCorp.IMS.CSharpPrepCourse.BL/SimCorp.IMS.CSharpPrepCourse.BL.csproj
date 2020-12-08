@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{735DD589-4D9B-47AB-BE16-5C7FFAADC2ED}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>SimCorp.IMS.CSharpPrepCourse.BL</RootNamespace>
+    <AssemblyName>SimCorp.IMS.CSharpPrepCourse.BL</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BatteryCharger\AppleFastCharge.cs" />
+    <Compile Include="BatteryCharger\BatteryChargerBase.cs" />
+    <Compile Include="BatteryCharger\HuaweiSuperCharge2_0.cs" />
+    <Compile Include="BatteryCharger\IBatteryCharger.cs" />
+    <Compile Include="BatteryCharger\MediaTekPumpExpress4_0.cs" />
+    <Compile Include="BatteryCharger\MotorolaTurboPower30.cs" />
+    <Compile Include="BatteryCharger\OnePlusWarpCharge30.cs" />
+    <Compile Include="BatteryCharger\OppoSuperVOOC.cs" />
+    <Compile Include="BatteryCharger\SamsungAdaptiveFastCharger.cs" />
+    <Compile Include="BatteryCharger\USB2_0.cs" />
+    <Compile Include="BatteryCharger\USB3_0.cs" />
+    <Compile Include="Battery\BatteryBase.cs" />
+    <Compile Include="Battery\BatteryLiIon.cs" />
+    <Compile Include="Battery\BatteryLiPol.cs" />
+    <Compile Include="Battery\BatteryNiCd.cs" />
+    <Compile Include="Battery\BatteryNiMH.cs" />
+    <Compile Include="Battery\IBattery.cs" />
+    <Compile Include="ConsoleUserInterface\ConsoleOutput.cs" />
+    <Compile Include="ConsoleUserInterface\IOutput.cs" />
+    <Compile Include="ISMSListOutput.cs" />
+    <Compile Include="ISMSOutput.cs" />
+    <Compile Include="SMSFilterState.cs" />
+    <Compile Include="SMS.cs" />
+    <Compile Include="SMSDateTimeTrimmer.cs" />
+    <Compile Include="SMSFormEventArgs.cs" />
+    <Compile Include="SMSSender.cs" />
+    <Compile Include="MobileComponentFactory\BatteryChargerFactory.cs" />
+    <Compile Include="MobileComponentFactory\BatteryFactory.cs" />
+    <Compile Include="MobileComponentFactory\FactoryBase.cs" />
+    <Compile Include="MobileComponentFactory\FactoryOutput.cs" />
+    <Compile Include="MobileComponentFactory\IFactory.cs" />
+    <Compile Include="MobileComponentFactory\PlaybackFactory.cs" />
+    <Compile Include="MobileComponentFactory\ScreenFactory.cs" />
+    <Compile Include="MobilePhone.cs" />
+    <Compile Include="Playback\AirPods.cs" />
+    <Compile Include="Playback\AirPodsPro.cs" />
+    <Compile Include="Playback\GalaxyBuds.cs" />
+    <Compile Include="Playback\GalaxyBudsLive.cs" />
+    <Compile Include="Playback\HomePod.cs" />
+    <Compile Include="Playback\IPlayback.cs" />
+    <Compile Include="Playback\NoNameHeadSet.cs" />
+    <Compile Include="Playback\PhoneSpeaker.cs" />
+    <Compile Include="Playback\PlaybackBase.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Screen\AcousticPulseRecognition.cs" />
+    <Compile Include="Screen\Capacitive.cs" />
+    <Compile Include="Screen\Infrared.cs" />
+    <Compile Include="Screen\IScreen.cs" />
+    <Compile Include="Screen\IScreenTouch.cs" />
+    <Compile Include="Screen\OpticalImaging.cs" />
+    <Compile Include="Screen\Resistive.cs" />
+    <Compile Include="Screen\ScreenBase.cs" />
+    <Compile Include="Screen\ScreenMultipleTouchBase.cs" />
+    <Compile Include="Screen\ScreenNoTouch.cs" />
+    <Compile Include="Screen\ScreenSingleTouch.cs" />
+    <Compile Include="Screen\ScreenTouchBase.cs" />
+    <Compile Include="Screen\SurfaceAcousticWave.cs" />
+    <Compile Include="SimCorpMobile.cs" />
+    <Compile Include="SMSFormatHandler.cs" />
+    <Compile Include="SMSProvider.cs" />
+    <Compile Include="SMSStorage.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
